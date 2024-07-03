@@ -50,6 +50,7 @@ const SignIn = () => {
       localStorage.setItem('FuriUser',JSON.stringify(response.data.newUser))
       toast.success('Login succesfully')
       navigate('/')
+      window.location.reload()
 
     }
     
