@@ -56,20 +56,18 @@ const SignUp = () => {
   // ================= Email Validation End here ===============
 
   const handleSignUp = async (e) => {
-    alert("hhhhhh")
+  
     e.preventDefault();
 
-      console.log("klklklklkl");
-      alert("klklklklkl");
-      alert(FirstName)
-      alert(LastName)
+   
+     
       // ============== Getting the value ==============
      
         const response = await axios.post('http://localhost:3000/api/auths/register', { FirstName, LastName, email, password, phone })
         console.log(response);
         if (response) {
           toast.success('Registerd succesfully')
-          navigate('/login')
+          navigate('/signin')
 
 
         }
